@@ -1,0 +1,26 @@
+{
+  "name": "rafanotes",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^4.12.0",
+    "node-sass-chokidar": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "deploy": "aws s3 cp --recursive ./build s3://rafamaya.com",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

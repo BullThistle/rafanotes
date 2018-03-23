@@ -1,0 +1,8 @@
+@mixin split-columns($numCols, $columnGap) {
+    -moz-column-count: $numCols;
+    column-count: $numCols;
+    -webkit-column-count: $numCols;
+    -moz-column-gap: $columnGap;
+    -webkit-column-gap: $columnGap;
+    column-gap: $columnGap;
+}

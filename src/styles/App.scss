@@ -1,0 +1,51 @@
+@import "./_vars.scss";
+@import "./_mixins.scss";
+
+html{
+  height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height:100%;
+    background: 
+    url('../static/img/waterfront.jpg') !important;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.notesWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+.notesBody {
+  padding-top: 24px;
+  display: flex;
+  flex: 1 1 85%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 80px;
+}
+
+.notesFooter {
+  display: flex;
+  background-color: #695c5f; 
+  position:fixed;
+  margin-top: 30px;
+  bottom:0;
+  left:0;
+  width:100%;
+}

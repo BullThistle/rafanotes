@@ -1,0 +1,11 @@
+.menu {
+    position: relative !important;
+    background-color: #8a85a2 !important;
+}
+
+a.item {
+    border-left: none !important;
+    &:before{
+        display: none;
+    }
+}
